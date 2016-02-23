@@ -18,6 +18,7 @@ namespace NancyForContainer
                 });
 
                 config.RunAsLocalSystem();
+                config.StartAutomatically();
                 config.SetDescription("Nancy-SelfHost example");
                 config.SetDisplayName("Nancy-SelfHost Service");
                 config.SetServiceName("Nancy-SelfHost");
