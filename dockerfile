@@ -1,2 +1,2 @@
 FROM microsoft/aspnet
-COPY NancyForContainer\\bin\\Release c:\\NancyForContainer
+COPY NancyForContainer\\bin\\Release \\NancyForContainer
