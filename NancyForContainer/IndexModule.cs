@@ -1,9 +1,7 @@
-﻿using Nancy;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using Nancy;
 
 namespace NancyForContainer
 {
@@ -13,8 +11,19 @@ namespace NancyForContainer
         {
             Get["/version"] = parameters =>
             {
-                Dictionary<String, String> result = new Dictionary<string, string>();
-                result.Add("Version", "1.0.0");
+                var result = new Dictionary<string, string>
+                {
+                    { "Version", "1.0.0" }
+                };
+                return Response.AsJson(result);
+            };
+
+            Get["/now"] = parameters =>
+            {
+                var result = new Dictionary<string, string>
+                {
+                    { "Now", DateTime.Now.ToString(CultureInfo.InvariantCulture) }
+                };
                 return Response.AsJson(result);
             };
         }

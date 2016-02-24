@@ -1,6 +1,4 @@
-﻿using System;
-using Nancy.Hosting.Self;
-using Topshelf;
+﻿using Topshelf;
 
 namespace NancyForContainer
 {
